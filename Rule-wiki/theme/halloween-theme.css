@@ -1,0 +1,376 @@
+/*
+    Powered on 2025
+    [2025 Wikidot Theme]
+    Created by Dr Talcite
+    CC BY-SA 3.0
+*/
+
+/* 版头标题：小狼天穹体 */
+@import url("https://fontsapi.zeoseven.com/777/main/result.css");
+
+/* 页面标题：猫啃珠圆体 */
+@import url("https://fontsapi.zeoseven.com/88/main/result.css");
+
+/* 正文字体：寒蝉全圆体 */
+@import url("https://fontsapi.zeoseven.com/3/main/result.css");
+
+
+
+/* 基础变量修改 */
+
+:root {
+    scrollbar-color: rgb(var(--fossil-accent)) rgb(var(--fossil-light));
+    --sp_header-height: min(calc(11.5rem + 7.25vw), 18.75rem);
+    --sp_header-logo: url(https://rule-wiki-sandbox.wdfiles.com/local--files/halloween-theme/rule-wiki-halloween-new.png);
+    --sp_header-title-scale: 1.5;
+
+    --header-title: "规则怪谈档案馆";
+    --header-subtitle: "记住它们，或者被它们记住";
+    --header-font: "MaokenZhuyuanTi", "幼圆", Inter, Noto Sans SC, Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
+    --body-font: "寒蝉全圆体", 'Public Sans', Inter, Nanum Gothic, Arial, sans-serif;
+
+    --fossil-accent: 228 119 18;
+    --fossil-secondary: 250 199 137;
+    --fossil-alt: 200 144 240;
+    --fossil-dark: 20 20 20;
+    --fossil-light: 30 30 30;
+    --fossil-black: 250 250 250;
+
+    --fossil-header: url(https://rule-wiki-sandbox.wdfiles.com/local--files/halloween-theme/halloween-header.jpg);
+    --fossil-header-slice-offset: calc(3.25rem + 3.25vw);
+    --fossil-bg: url(https://rule-wiki-sandbox.wdfiles.com/local--files/halloween-theme/halloween-bg.svg);
+    --fossil-footer: url(https://rule-wiki-sandbox.wdfiles.com/local--files/halloween-theme/halloween-footer.jpg);
+    --fossil-radius: 1.5rem;
+
+    --sp_rate-module-text-color: rgb(var(--fossil-black));
+
+    --blockquote-icon: url("https://rule-wiki-sandbox.wdfiles.com/local--files/halloween-theme/halloween-pumpkin.svg");
+}
+
+/* 南瓜背景 */
+
+body {
+    background-size: calc(10rem + 20vw);
+}
+
+/* logo摇摆 */
+
+#header::before {
+    -webkit-animation: sway 3s ease-in-out infinite;
+    animation: sway 3s ease-in-out infinite;
+}
+
+/* 标题字体 */
+
+#header h1 a {
+    font-family: "SyaoranThenKhung", Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
+}
+
+/* 页面标题前的南瓜 */
+
+:is(#page-title, .meta-title)::before {
+    margin-inline-end: -0.8em;
+    border-radius: 0;
+    background-color: transparent;
+    background-image: url(https://rule-wiki-sandbox.wdfiles.com/local--files/halloween-theme/halloween-pumpkin.svg);
+    transform: rotate(340deg);
+}
+
+/* 页面标题缩小字号、增加下边距 */
+
+#page-title,
+.meta-title {
+    font-size: min(calc(2em + 1.75vw), 3.5em);
+    margin-bottom: calc(2rem + 5vw);
+}
+
+/* 顶部黑色渐变调整 */
+
+#header-extra-div-1 {
+    background-image: linear-gradient(-12.25deg, rgb(var(--fossil-light)) calc(var(--fossil-header-slice-offset) + 2rem), transparent calc(var(--fossil-header-slice-offset) + 13rem)), linear-gradient(to bottom, rgb(var(--fossil-light)), transparent 100%), var(--fossil-header);
+    background-size: cover;
+    background-position: center, center, 30% 34rem;
+}
+
+/* 底部黑色渐变调整 */
+
+#extrac-div-1 {
+    background-image: linear-gradient(166.5deg, rgb(var(--fossil-light) / .5) 50%, transparent 90%), var(--fossil-footer);
+}
+
+/* 其它颜色修正 */
+
+#account-options {
+    background-color: rgb(var(--fossil-light) / .8);
+}
+
+.preview-message {
+    background-color: rgb(var(--fossil-light));
+}
+
+.alert,
+textarea,
+input[type="button"],
+a.btn,
+a.button {
+    background-color: black !important;
+    color: rgb(var(--fossil-black)) !important;
+}
+
+#side-bar .menu-item img {
+    display: none;
+}
+
+#side-bar {
+    background-color: rgb(var(--fossil-light));
+}
+
+#side-bar .collapsible-block-folded,
+#side-bar .side-block {
+    background: none !important;
+}
+
+#side-bar .collapsible-block-link {
+    margin-left: 0;
+}
+
+#login-status,
+#license-area,
+#footer-bar,
+.scp-image-block .scp-image-caption {
+    color: rgb(var(--fossil-black));
+}
+
+hr::before,
+hr::after {
+    background-color: rgb(var(--fossil-accent));
+}
+
+.owindow {
+    background-color: rgb(var(--fossil-light));
+}
+
+.owindow img {
+    background: none !important;
+}
+
+/* 南瓜分割线 */
+
+hr::after {
+    border: none;
+    border-radius: none;
+    background: url("https://rule-wiki-sandbox.wdfiles.com/local--files/halloween-theme/halloween-pumpkin.svg") !important;
+    transform: none;
+}
+
+/* 引用块角落的南瓜 */
+
+:is(blockquote, div.blockquote)::before {
+    transform: rotate(30deg);
+    background-color: transparent;
+    -webkit-mask-image: none;
+    mask-image: none;
+    background-image: var(--blockquote-icon);
+}
+
+/* 移动端调整 */
+
+@media screen and (max-width: 767px) {
+
+    :root {
+        --sp_header-logo-size: calc(var(--sp_header-height) * 1.5);
+    }
+
+    #login-status {
+        padding-inline-start: calc(var(--sp_area-min-margin) + 2rem);
+    }
+
+    /* 隐藏原本的logo并且使用另外一个div代替，以方便悬停显示版头标题 */
+
+    #header {
+        grid-template-areas:
+            "login login login login"
+            "top-bar top-bar top-bar top-bar"
+            ". . . ."
+            ". h1 . ."
+            ". . . .";
+        grid-template-columns: huh;
+    }
+
+    #search-top-box,
+    #header h1 a,
+    #header::before {
+        display: none;
+    }
+
+    #header-extra-div-3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: url(https://rule-wiki-sandbox.wdfiles.com/local--files/halloween-theme/rule-wiki-halloween-orange-new.png) no-repeat center;
+        background-size: contain;
+        filter: drop-shadow(0px 0px 20px #ED7626);
+        width: var(--sp_header-logo-adaptive-size);
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+        justify-self: center;
+        -webkit-animation: sway 3s ease-in-out infinite;
+        animation: sway 3s ease-in-out infinite;
+    }
+
+    #header-extra-div-3::before {
+        content: "规则怪谈档案馆\ATrick or Treat!";
+        white-space: pre;
+        font-family: "SyaoranThenKhung", Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
+        font-size: var(--sp_header-title-size);
+        color: rgb(var(--fossil-black));
+        text-shadow: 0 0 20px rgb(var(--fossil-accent)), 0 0 5px black, 0 0 10px black;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    #header-extra-div-3:hover::before {
+        opacity: 1;
+    }
+
+    #search-top-box-form input.btn[type=submit] {
+        background: rgb(var(--fossil-accent));
+    }
+
+    #top-bar :is(.top-bar, .mobile-top-bar)>ul>li>a {
+        text-shadow: 0 0 1em rgb(var(--fossil-dark) / .95);
+        border-radius: var(--fossil-radius);
+    }
+
+}
+
+/* 编辑栏 */
+
+.edit-help-34 {
+    margin-top: 8px;
+}
+
+input:is(
+edit-diff-button, 
+edit-preview-button, 
+edit-save-draft-button, 
+edit-save-continue-button) {
+    cursor: pointer !important;
+    background-color: #0005 !important;
+}
+
+input:is(
+edit-diff-button, 
+edit-preview-button, 
+edit-save-draft-button, 
+edit-save-continue-button, 
+edit-save-button):hover {
+    background-color: black !important;
+}
+
+/* “取消”和“保存”按钮特殊红绿颜色 */
+
+input#edit-cancel-button {
+    background-color: #500 !important;
+}
+
+input#edit-cancel-button:hover {
+    background-color: #A00 !important;
+}
+
+input#edit-save-button {
+    background-color: #050 !important;
+}
+
+input#edit-save-button:hover {
+    background-color: #0A0 !important;
+}
+
+/* 页面选项按钮 */
+
+.page-options-bottom {
+    margin: 10px 0;
+}
+
+:is(#page-options-bottom, 
+page-options-bottom-2) a.btn {
+    text-decoration: none;
+    border-radius: 1em;
+    padding: 0.3em .7em;
+    background-color: #0005 !important;
+}
+
+:is(#page-options-bottom, 
+page-options-bottom-2) a.btn:hover {
+    background-color: black !important;
+    box-shadow: 0 0 3px gray;
+}
+
+/* 摇摆动画 */
+
+@keyframes sway {
+    0% {
+        transform: rotate(2deg);
+    }
+
+    50% {
+        transform: rotate(-2deg);
+    }
+
+    100% {
+        transform: rotate(2deg);
+    }
+}
+
+
+/* 修正字体行高问题 */
+
+textarea#edit-page-textarea,
+#lock-info,
+.alert, 
+input[type="button"], 
+a.btn, 
+a.button {
+    line-height: 1.4;
+}
+
+
+
+/** FontAwesome 编辑器按钮图标
+ *  由 Wikidot 社区开发
+ *  
+ *  Transforms the standard Wikidot Editor Toolbar so that it utilizes
+ *  FontAwesome symbols and uses Bootstrap buttons
+ *  ***************************************************************************/
+ 
+.wd-editor-toolbar-panel div{  height: auto; }
+.wd-editor-toolbar-panel ul li a{
+    background-image: url('//css.wikidot.com/local--files/cssnippet:fontawesome-editor/editorButtons.png');
+    background-color: #FFF;
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 1.42857;
+    padding: 0;
+    border: 1px solid #CCC;
+    height: 22px;
+    width: 22px;
+}
+.wd-editor-toolbar-panel ul li a:hover,
+.wd-editor-toolbar-panel ul li a:focus{
+    background-image: url('//css.wikidot.com/local--files/cssnippet:fontawesome-editor/editorButtons.png');
+    background-color: #EBEBEB;
+    border-color: #ADADAD;
+}
+.wd-editor-toolbar-panel ul li a:active{
+    background-image: url('//css.wikidot.com/local--files/cssnippet:fontawesome-editor/editorButtons.png');
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125) inset;
+    outline: none;
+}
+
+/* 按钮组间分割线 */
+
+.wd-editor-toolbar-panel li.hseparator{
+    background-color: rgb(var(--fossil-accent));
+    width: 2px;
+}
