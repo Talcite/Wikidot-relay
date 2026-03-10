@@ -1,0 +1,26 @@
+/* 引入主站版式，方便同步更新 */
+ 
+@import url("https://cdn.jsdelivr.net/gh/Talcite/Wikidot-relay/Rule-wiki/theme/cn-theme.css");
+ 
+:root {
+    --header-logo: url("https://cdn.jsdelivr.net/gh/Talcite/Wikidot-relay/Rule-wiki/icons/rule-wiki-sandbox-white.svg");
+ 
+    --title-size: 1.8rem;
+}
+ 
+@media only screen and (max-width: 800px) {
+:root {
+    --title-size: 1.7rem;
+}
+}
+ 
+@media only screen and (max-width: 420px) {
+:root {
+    --title-size: calc(1.7rem - 0.09 * (420px - 100vw));
+}
+}
+ 
+:root:lang(cn) {
+    --header-title: "规则怪谈档案馆沙盒";
+    --header-subtitle: "千仞高塔，筑基于此";
+}
