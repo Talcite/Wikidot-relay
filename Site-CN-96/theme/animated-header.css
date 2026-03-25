@@ -1,0 +1,75 @@
+/* 顶栏遮挡色条 */
+
+div#container-wrap {
+    background-image:
+linear-gradient(to bottom,
+transparent 0px,
+transparent 135px,
+#252325 135px,
+#252325 163px,
+transparent 163px);
+    background-size: 100% 163px;
+    background-repeat: no-repeat;
+}
+
+/* 隐藏原版式的头图 */
+
+#extra-div-1 {
+    display: none;
+}
+
+/* 新头图 */
+
+#extra-div-2 {
+    z-index: -1;
+    width: 100%;
+    height: 163px;
+    top: 0;
+    position: absolute;
+    background-color: rgb(87, 107, 166);
+
+    background-image:
+
+/* 四层结构 */
+
+/* 第一层：电线杆剪影 */
+
+url(https://cdn.jsdelivr.net/gh/Talcite/Wikidot-relay/Site-CN-96/theme/images/poles-silhouette-3.png),
+
+/* 第二层：天际线工厂剪影 */
+
+url(https://cdn.jsdelivr.net/gh/Talcite/Wikidot-relay/Site-CN-96/theme/images/skyline-silhouette.png),
+
+/* 第三层：落日背景 */
+
+url(https://cdn.jsdelivr.net/gh/Talcite/Wikidot-relay/Site-CN-96/theme/images/sunset.png),
+
+/* 第四层：当图片未加载出来时，在最底层显示的fallback渐变 */
+
+linear-gradient(to bottom,
+rgb(92, 110, 172) 0px,
+rgb(189, 163, 202) 100px,
+rgb(254, 179, 170) 124px,
+rgb(254, 130, 42) 138px,
+rgba(0, 0, 0, 0.5) 141px,
+rgba(0, 0, 0, 1) 161px,
+rgba(0, 0, 0, 0.5) 163px);
+
+    background-repeat: repeat-x, repeat-x, repeat-x, repeat-x;
+    background-size: 200% 110%, 50%, cover, contain;
+    background-position: 0% 0%, 0% 80%, 0% 83%, 0 0;
+
+    -webkit-animation: slide 15s linear infinite;
+    -moz-animation: slide 15s linear infinite;
+    -o-animation: slide 15s linear infinite;
+    animation: slide 15s linear infinite;
+}
+
+/* 分层滑行动画：
+远景天际线缓慢向右移动，
+近景电线杆快速向右移动 */
+
+@keyframes slide {
+    0% {background-position: 0% 0%, 0% 80%, 0% 83%, 0 0;}
+    100% {background-position: -8000% 0%, 100% 80%, 0% 83%, 0 0;}
+}
