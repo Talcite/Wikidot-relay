@@ -1,0 +1,98 @@
+/* Sigma-9 引入 */
+@import url("https://sigma9.scpwikicn.com/cn/cn/sigma9_ch.min.css");
+
+/* 引入版式 */
+@import url("https://cdn.jsdelivr.net/gh/Talcite/Wikidot-relay/Site-CN-96/theme/global-theme.css");
+
+/* 引入动态版头 */
+@import url("https://cdn.jsdelivr.net/gh/Talcite/Wikidot-relay/Site-CN-96/theme/animated-header.css");
+
+
+.content-panel .content-type-title > p {
+    margin: 0;
+}
+
+.content-panel .content-type-title {
+    font-size: 120%;
+    font-weight: bold;
+    padding: 5px 20px;
+    background-color: #666;
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+    box-shadow: inset 0 1px 1px rgba(255,255,255,.8),
+    inset 0 15px 1px rgba(255,255,255,.2),
+    inset 0 15px 10px rgba(255,255,255,.2);
+}
+
+.content-panel .content-type-description {
+    padding: 0 20px;
+    text-align: justify;
+}
+
+.content-panel.content-row .content-type-description {
+    padding: 5px 20px;
+}
+
+.content-panel.content-row .content-type-description-2 {
+    padding: 0 20px;
+    text-align: justify;
+}
+
+.list-pages-box tr > td:first-child > div {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.list-pages-box tr > td:first-child > div > div:first-child {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+}
+
+.list-pages-box tr > td:first-child > div img.wanderers {
+    min-width: 16px;
+    width: 16px;
+    height: 11px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+.list-pages-box tr > td:first-child > div > div:not(.wanderers):not(.wanderers-adult) > img.wanderers {
+    display: none;
+}
+
+.international-block .panel-body {
+    padding: 0;
+}
+
+.international-entry {
+    padding: 3px 20px;
+}
+
+.international-entry:nth-child(even),
+.alternate:nth-child(even) {
+    background-color: rgba(255,255,255,.9);
+    border-top: solid 1px #eeeee0;
+    border-bottom: solid 1px #eeeee0;
+}
+
+.international-entry .international-logo {
+    width: 48px;
+}
+
+.international-entry .international-description {
+    padding: 0 20px;
+}
+
+.international-entry .international-description > p {
+    padding: 0;
+}
+
+.international-entry .international-description > p:first-child {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.international-entry .international-description > p:not(:first-child) {
+    font-style: italic;
+}
