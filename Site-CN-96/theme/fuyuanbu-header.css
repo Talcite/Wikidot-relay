@@ -1,0 +1,39 @@
+div#header {
+    background-image: url(https://cdn.jsdelivr.net/gh/Talcite/Wikidot-relay/Site-CN-96/theme/images/history-recovery-white.png);
+}
+
+div#header h1 a span {
+    font-size: 0px;
+}
+
+div#header h1 a:before {
+    content: "历史复原部";
+    font-family: "Liu ti", "仿宋", serif;
+    font-weight: bold;
+    font-size: 95%;
+    color: rgba(240, 240, 240, 1);
+    white-space: pre;
+    text-shadow: 2px 1px 2px black;
+}
+
+div#header h2 span {
+    font-size: 0px;
+    padding: 5px 0;
+}
+
+div#header h2:after {
+    content: "回溯，铭记，存续";
+    font-weight: bold;
+    font-size: 110%;
+    color: rgba(240, 240, 192, 1);
+    white-space: pre;
+    text-shadow: 2px 1px 2px black;
+}
+
+#extra-div-1 {
+    filter: grayscale(0.9);
+}
+
+#extra-div-2 {
+    filter: grayscale(0.9) brightness(1.2);
+}
