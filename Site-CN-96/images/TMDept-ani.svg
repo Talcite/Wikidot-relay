@@ -3,6 +3,85 @@
     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
     viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
 
+<style type="text/css" id="tmdept-animation">
+/* <![CDATA[ */
+    svg[viewBox="0 0 1000 1000"]:hover #stripe-top {
+        animation: sway-top 1.5s ease forwards;
+    }
+
+    svg[viewBox="0 0 1000 1000"]:hover #stripe-middle {
+        animation: sway-middle 1.5s 0.05s ease forwards;
+    }
+
+    svg[viewBox="0 0 1000 1000"]:hover #stripe-bottom {
+        animation: sway-bottom 1.5s 0.1s ease forwards;
+    }
+
+    @keyframes sway-top {
+        0% {
+            translate: 500px;
+            filter: brightness(1.2);
+        }
+        100% {
+            translate: 0;
+            filter: brightness(1);
+        }
+    }
+
+    @keyframes sway-middle {
+        0% {
+            translate: 500px;
+            filter: brightness(1.3);
+        }
+        100% {
+            translate: 0;
+            filter: brightness(1);
+        }
+    }
+
+    @keyframes sway-bottom {
+        0% {
+            translate: 500px;
+            filter: brightness(1.2);
+        }
+        100% {
+            translate: 0;
+            filter: brightness(1);
+        }
+    }
+
+    svg[viewBox="0 0 1000 1000"]:hover #base {
+        transform-origin: 729.23px 490.88px;
+        animation: spin 1.45s ease forwards;
+    }
+
+    @keyframes spin {
+        0% {
+            scale: 0.8;
+            rotate: -60deg;
+        }
+        100% {
+            scale: 1;
+            rotate: 120deg;
+        }
+    }
+
+    svg[viewBox="0 0 1000 1000"]:hover #inner {
+        transform-origin: 729.23px 490.88px;
+        animation: come-in 1.4s ease forwards;
+    }
+
+    @keyframes come-in {
+        0% {
+            scale: 0.7;
+        }
+        100% {
+            scale: 1;
+        }
+    }
+/* ]]> */
+</style>
+
 <g id="logo">
 
     <linearGradient id="logo-gradient" gradientUnits="userSpaceOnUse" x1="729.5" y1="695.5" x2="729.5" y2="262.8">
@@ -10,10 +89,15 @@
 		<stop  offset="1" style="stop-color:#5765EA"/>
 	</linearGradient>
 
-	<path id="base" style="fill:url(#logo-gradient);" d="M931.5,521.8
-		c1.4-10.1,2.2-20.2,2.2-30.9c0-86.8-53.9-160.7-130.1-190.5l-7.3-37.6H662.1l-7.3,37.6c-76.1,29.8-130.1,104-130.1,190.5
-		c0,10.4,0.8,20.8,2.2,30.9L498,547.1l67.1,116.3l36.5-12.6c35.1,28.1,79.5,44.7,127.8,44.7s92.7-16.9,127.8-44.7l36.5,12.6
-		L961,547.1L931.5,521.8z"/>
+    <clipPath id="base">
+        <path id="scp-logo" d="M931.5,521.8
+            c1.4-10.1,2.2-20.2,2.2-30.9c0-86.8-53.9-160.7-130.1-190.5l-7.3-37.6H662.1l-7.3,37.6c-76.1,29.8-130.1,104-130.1,190.5
+            c0,10.4,0.8,20.8,2.2,30.9L498,547.1l67.1,116.3l36.5-12.6c35.1,28.1,79.5,44.7,127.8,44.7s92.7-16.9,127.8-44.7l36.5,12.6
+            L961,547.1L931.5,521.8z"/>
+    </clipPath>
+
+    <rect width="100%" height="100%" fill="url(#logo-gradient)" clip-path="url(#base)" />
+
 	<g id="inner">
 		<g id="text">
 			<g id="Dept">
@@ -47,11 +131,11 @@
 <g id="clip">
 	<g>
 		<defs>
-			<path id="SVGID_1_" d="M571.3,334.2H6.9l115.9,298.5h403.9L475,543.3l32.9-28.8c-0.8-8.1-1.2-16-1.2-23.6
+			<path id="left-wing-mask" d="M571.3,334.2H6.9l115.9,298.5h403.9L475,543.3l32.9-28.8c-0.8-8.1-1.2-16-1.2-23.6
 				c0-45.6,13.7-89.4,39.7-126.8C553.9,353.3,562.2,343.4,571.3,334.2z"/>
 		</defs>
 		<clipPath id="left-wing">
-			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+			<use xlink:href="#left-wing-mask"  style="overflow:visible;"/>
 		</clipPath>
 
         <g id="stripes" style="clip-path:url(#left-wing);">
