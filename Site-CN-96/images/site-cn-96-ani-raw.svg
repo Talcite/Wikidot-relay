@@ -10,67 +10,67 @@
 
         @keyframes shaky {
             0% {
-                translate: 0 0;
+                transform: translate(0, 0);
             }
 
             3% {
-                translate: 0.5px 0;
+                transform: translate(0.5px, 0);
             }
 
             10% {
-                translate: 0 0;
+                transform: translate(0, 0);
             }
 
             13% {
-                translate: 0 0;
+                transform: translate(0, 0);
             }
 
             20% {
-                translate: 0.5px 0;
+                transform: translate(0.5px, 0);
             }
 
             23% {
-                translate: 0 -0.5px;
+                transform: translate(0, -0.5px);
             }
 
             33% {
-                translate: 0 0;
+                transform: translate(0, 0);
             }
 
             36% {
-                translate: 0.5px 0;
+                transform: translate(0.5px, 0);
             }
 
             46% {
-                translate: 0 0;
+                transform: translate(0, 0);
             }
 
             53% {
-                translate: 0.5px -1px;
+                transform: translate(0.5px, -1px);
             }
 
             60% {
-                translate: 0 -0.5px;
+                transform: translate(0, -0.5px);
             }
 
             63% {
-                translate: 0 -1px;
+                transform: translate(0, -1px);
             }
 
             73% {
-                translate: 0 0;
+                transform: translate(0, 0);
             }
 
             83% {
-                translate: 0.5px 0;
+                transform: translate(0.5px, 0);
             }
 
             86% {
-                translate: 0 0;
+                transform: translate(0, 0);
             }
 
             100% {
-                translate: 0 -0.5px;
+                transform: translate(0, -0.5px);
             }
         }
 
@@ -80,15 +80,15 @@
 
         @keyframes drilling {
             0% {
-                translate: 0 -70px;
+                transform: translate(0, -70px);
             }
 
             50% {
-                translate: 0 0;
+                transform: translate(0, 0);
             }
 
             100% {
-                translate: 0 -70px;
+                transform: translate(0, -70px);
             }
         }
 
@@ -99,15 +99,15 @@
 
         @keyframes hammer-rotate {
             0% {
-                rotate: -20deg;
+                transform: rotate(-20deg);
             }
 
             50% {
-                rotate: 20deg;
+                transform: rotate(20deg);
             }
 
             100% {
-                rotate: -20deg;
+                transform: rotate(-20deg);
             }
         }
 
@@ -118,15 +118,15 @@
 
         @keyframes small-hammer-rotate {
             0% {
-                rotate: 486deg;
+                transform: rotate(486deg);
             }
 
             50% {
-                rotate: 306deg;
+                transform: rotate(306deg);
             }
 
             100% {
-                rotate: 126deg;
+                transform: rotate(126deg);
             }
         }
 
