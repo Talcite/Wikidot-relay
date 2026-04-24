@@ -1,0 +1,464 @@
+<svg id="site-cn-96-ani" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000"
+    shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+
+    <style>
+        /* <![CDATA[ */
+        svg[viewBox="0 0 1000 1000"] #v-belt {
+            animation: shaky 3s ease-in-out infinite normal forwards;
+        }
+
+        @keyframes shaky {
+            0% {
+                translate: 0 0;
+            }
+
+            3% {
+                translate: 0.5px 0;
+            }
+
+            10% {
+                translate: 0 0;
+            }
+
+            13% {
+                translate: 0 0;
+            }
+
+            20% {
+                translate: 0.5px 0;
+            }
+
+            23% {
+                translate: 0 -0.5px;
+            }
+
+            33% {
+                translate: 0 0;
+            }
+
+            36% {
+                translate: 0.5px 0;
+            }
+
+            46% {
+                translate: 0 0;
+            }
+
+            53% {
+                translate: 0.5px -1px;
+            }
+
+            60% {
+                translate: 0 -0.5px;
+            }
+
+            63% {
+                translate: 0 -1px;
+            }
+
+            73% {
+                translate: 0 0;
+            }
+
+            83% {
+                translate: 0.5px 0;
+            }
+
+            86% {
+                translate: 0 0;
+            }
+
+            100% {
+                translate: 0 -0.5px;
+            }
+        }
+
+        svg[viewBox="0 0 1000 1000"] #working-wire {
+            animation: drilling 3s cubic-bezier(0.25, 0.1, 0.64, 1) infinite normal forwards;
+        }
+
+        @keyframes drilling {
+            0% {
+                translate: 0 -70px;
+            }
+
+            50% {
+                translate: 0 0;
+            }
+
+            100% {
+                translate: 0 -70px;
+            }
+        }
+
+        svg[viewBox="0 0 1000 1000"] #hammer {
+            animation: hammer-rotate 3s cubic-bezier(0.25, 0.1, 0.64, 1) infinite normal forwards;
+            transform-origin: 562.2px 390.1px;
+        }
+
+        @keyframes hammer-rotate {
+            0% {
+                rotate: -20deg;
+            }
+
+            50% {
+                rotate: 20deg;
+            }
+
+            100% {
+                rotate: -20deg;
+            }
+        }
+
+        svg[viewBox="0 0 1000 1000"] #small-hammer {
+            animation: small-hammer-rotate 3s linear infinite normal forwards;
+            transform-origin: 415px 601px;
+        }
+
+        @keyframes small-hammer-rotate {
+            0% {
+                rotate: 486deg;
+            }
+
+            50% {
+                rotate: 306deg;
+            }
+
+            100% {
+                rotate: 126deg;
+            }
+        }
+
+        svg[viewBox="0 0 1000 1000"] #link {
+            animation: link-ani-merged 3s linear infinite normal forwards;
+            transform-origin: 449.75px 504.44px;
+        }
+
+        @keyframes link-ani-merged {
+            0% {
+                transform: translate(-27.31px, 33.21px) rotate(6.54deg);
+            }
+
+            3.33% {
+                transform: translate(-24.20px, 30.08px) rotate(3.91deg);
+            }
+
+            6.67% {
+                transform: translate(-21.22px, 24.24px) rotate(0.97deg);
+            }
+
+            10% {
+                transform: translate(-19.15px, 17.16px) rotate(-1.37deg);
+            }
+
+            13.33% {
+                transform: translate(-17.50px, 8.87px) rotate(-3.35deg);
+            }
+
+            16.67% {
+                transform: translate(-15.00px, 0.09px) rotate(-5.32deg);
+            }
+
+            20% {
+                transform: translate(-13.78px, -8.88px) rotate(-6.53deg);
+            }
+
+            23.33% {
+                transform: translate(-12.51px, -17.81px) rotate(-7.33deg);
+            }
+
+            26.67% {
+                transform: translate(-12.16px, -26.47px) rotate(-7.47deg);
+            }
+
+            30% {
+                transform: translate(-11.76px, -34.02px) rotate(-7.07deg);
+            }
+
+            33.33% {
+                transform: translate(-12.34px, -40.71px) rotate(-6.12deg);
+            }
+
+            36.67% {
+                transform: translate(-13.00px, -46.99px) rotate(-4.88deg);
+            }
+
+            40% {
+                transform: translate(-14.32px, -51.78px) rotate(-3.25deg);
+            }
+
+            43.33% {
+                transform: translate(-16.26px, -55.47px) rotate(-1.57deg);
+            }
+
+            46.67% {
+                transform: translate(-19.66px, -57.74px) rotate(0.81deg);
+            }
+
+            50% {
+                transform: translate(-22.76px, -58.83px) rotate(2.78deg);
+            }
+
+            53.33% {
+                transform: translate(-27.31px, -55.50px) rotate(4.88deg);
+            }
+
+            56.67% {
+                transform: translate(-31.78px, -49.78px) rotate(6.58deg);
+            }
+
+            60% {
+                transform: translate(-36.80px, -43.17px) rotate(8.44deg);
+            }
+
+            63.33% {
+                transform: translate(-41.01px, -35.39px) rotate(10.13deg);
+            }
+
+            66.67% {
+                transform: translate(-44.88px, -27.41px) rotate(11.84deg);
+            }
+
+            70% {
+                transform: translate(-47.41px, -19.29px) rotate(13.10deg);
+            }
+
+            73.33% {
+                transform: translate(-48.02px, -10.64px) rotate(13.65deg);
+            }
+
+            76.67% {
+                transform: translate(-48.18px, -2.50px) rotate(14.11deg);
+            }
+
+            80% {
+                transform: translate(-47.44px, 5.31px) rotate(14.38deg);
+            }
+
+            83.33% {
+                transform: translate(-45.60px, 12.57px) rotate(14.10deg);
+            }
+
+            86.67% {
+                transform: translate(-43.25px, 18.95px) rotate(13.48deg);
+            }
+
+            90% {
+                transform: translate(-39.55px, 24.76px) rotate(12.11deg);
+            }
+
+            93.33% {
+                transform: translate(-36.19px, 28.84px) rotate(10.75deg);
+            }
+
+            96.67% {
+                transform: translate(-31.22px, 32.04px) rotate(8.54deg);
+            }
+
+            100% {
+                transform: translate(-28.17px, 33.27px) rotate(6.92deg);
+            }
+        }
+
+        /* ]]> */
+    </style>
+
+    <defs>
+        <linearGradient id="middle-shield-fill"
+            x1="500" y1="50" x2="500" y2="884.7" spreadMethod="pad" gradientUnits="userSpaceOnUse">
+            <stop
+                id="middle-shield-fill-0"
+                offset="0%" stop-color="#94b6ff" />
+            <stop
+                id="middle-shield-fill-1"
+                offset="20.39%" stop-color="#86a3e5" />
+            <stop
+                id="middle-shield-fill-2"
+                offset="55.22%" stop-color="#7086bd" />
+            <stop
+                id="middle-shield-fill-3"
+                offset="82.98%" stop-color="#6374a5" />
+            <stop
+                id="middle-shield-fill-4"
+                offset="100%" stop-color="#5e6d9c" />
+        </linearGradient>
+
+        <linearGradient id="inner-circle-fill" x1="500" y1="205" x2="500" y2="795"
+            spreadMethod="pad" gradientUnits="userSpaceOnUse">
+            <stop id="inner-circle-fill-0" offset="0%" stop-color="#ff8532" />
+            <stop id="inner-circle-fill-1" offset="20.32%" stop-color="#fdc66b" />
+            <stop id="inner-circle-fill-2" offset="31.91%" stop-color="#fde183" />
+            <stop id="inner-circle-fill-3" offset="42.17%" stop-color="#fcf192" />
+            <stop id="inner-circle-fill-4" offset="50%" stop-color="#fcf797" />
+            <stop id="inner-circle-fill-5" offset="58.21%" stop-color="#fbf08e" />
+            <stop id="inner-circle-fill-6" offset="71.59%" stop-color="#f9dd76" />
+            <stop id="inner-circle-fill-7" offset="88.38%" stop-color="#f5be4e" />
+            <stop id="inner-circle-fill-8" offset="100%" stop-color="#f2a52f" />
+        </linearGradient>
+
+        <radialGradient id="sunshine" cx="500" cy="362.8" r="120"
+            spreadMethod="pad" gradientUnits="userSpaceOnUse">
+            <stop id="sunshine-0" offset="0%" stop-color="#f00" />
+            <stop id="sunshine-1" offset="65%" stop-color="rgba(255,0,0,0.5)" />
+            <stop id="sunshine-2" offset="70%" stop-color="rgba(255,0,0,0.2)" />
+            <stop id="sunshine-3" offset="75%" stop-color="rgba(255,0,0,0.1)" />
+            <stop id="sunshine-4" offset="85%" stop-color="rgba(255,0,0,0.05)" />
+            <stop id="sunshine-5" offset="100%" stop-color="rgba(255,0,0,0)" />
+        </radialGradient>
+    </defs>
+
+
+    <g id="site-cn-96-ani">
+
+        <path id="middle-shield"
+            d="M926,662.2l-62.5-36.1c13.7-39.5,21.2-82,21.2-126.1c0-187.6-134.4-343.9-312.1-377.8v-72.2h-145v72.2C249.7,156.1,115.4,312.4,115.4,500c0,44.2,7.5,86.6,21.2,126.1L74,662.2l72.5,125.6l62.6-36.1c70.5,81.4,174.7,133,290.9,133s220.4-51.5,290.9-133l62.6,36.1L926,662.2Z"
+            fill="url(#middle-shield-fill)"
+            stroke="#000" stroke-width="35" stroke-miterlimit="10" />
+
+        <circle id="inner-circle" r="295" cx="500" cy="500"
+            fill="url(#inner-circle-fill)" stroke="#000" stroke-width="30"
+            stroke-miterlimit="10" />
+
+        <circle id="sun" r="120" cx="500" cy="362.8"
+            fill="url(#sunshine)" />
+
+        <g id="silhouette">
+
+            <path id="ground"
+                d="M502.2,785.6c71.9,0,162.7-41,208.2-97.4h-422.7c46.3,55.7,138.2,97.4,214.5,97.4Z" />
+
+            <g id="prime-mover">
+
+                <g id="actuator-base">
+                    <rect id="actuator-base-lower-part" x="382.1" y="635" width="91.7" height="54.6" />
+                    <rect id="actuator-base-upper-part" x="388.7" y="570.9" width="78.6"
+                        height="64.4" />
+                </g>
+
+                <g id="actuator">
+                    <path id="sub-base" d="M284.2,688.6H357v-44.8h-62.8c-5.5,0-10,4.5-10,10V688.6z" />
+                    <rect id="driver-sheave-base" x="311.2" y="633.8" width="25.1" height="13.1" />
+                    <ellipse id="driver-sheave" cx="323.7" cy="633.8" rx="12.6" ry="12.6" />
+
+                    <g id="v-belt">
+                        <line id="line1" x1="317.3" y1="627.1" x2="378.9"
+                            y2="573.5" stroke="#000" stroke-width="4.3667"
+                            stroke-miterlimit="10" />
+                        <line id="line2" x1="327.8" y1="642.5" x2="404.6"
+                            y2="621.9" stroke="#000" stroke-width="4.3667"
+                            stroke-miterlimit="10" />
+                    </g>
+
+                    <ellipse id="driven-sheave" fill="none" stroke="#000000" stroke-width="10.9167"
+                        stroke-miterlimit="10" cx="396.3" cy="595.3" rx="27.8" ry="27.8" />
+                </g>
+
+                <g id="small-hammer">
+                    <rect x="425" y="547.3"
+                        transform="matrix(0.4678 0.8838 -0.8838 0.4678 754.1081 -84.6446)"
+                        width="44.8" height="73.1" />
+                    <path
+                        d="M500.9,555.4c0,0-11.3-21.5-46.6-40.3l-1.8,0.9l26.8,50.9l27,50.7l1.8-0.9C512.4,576.8,500.9,555.4,500.9,555.4z" />
+                </g>
+            </g>
+
+            <g id="tower">
+                <path id="joint"
+                    d="M557.9,391.5l-7.1,12.3h22.9l-7.1-12.3C564.7,388.1,559.8,388.1,557.9,391.5z" />
+                <line fill="none" stroke="#000000" stroke-width="8.7333" stroke-miterlimit="10"
+                    x1="542.4" y1="463.2" x2="515.1" y2="695.1" />
+                <line fill="none" stroke="#000000" stroke-width="8.7333" stroke-miterlimit="10"
+                    x1="582.1" y1="463.2" x2="609.4" y2="695.1" />
+                <line fill="none" stroke="#000000" stroke-width="7.6417" stroke-miterlimit="10"
+                    x1="541.7" y1="469.1" x2="582.8" y2="469.1" />
+                <line fill="none" stroke="#000000" stroke-width="7.6417" stroke-miterlimit="10"
+                    x1="535.9" y1="518.1" x2="588.6" y2="518.1" />
+                <line fill="none" stroke="#000000" stroke-width="7.6417" stroke-miterlimit="10"
+                    x1="530.2" y1="567" x2="594.3" y2="567" />
+                <line fill="none" stroke="#000000" stroke-width="7.6417" stroke-miterlimit="10"
+                    x1="524.4" y1="616" x2="600.1" y2="616" />
+                <line fill="none" stroke="#000000" stroke-width="7.6417" stroke-miterlimit="10"
+                    x1="518.6" y1="664.9" x2="605.8" y2="664.9" />
+                <line fill="none" stroke="#000000" stroke-width="6.55" stroke-miterlimit="10"
+                    x1="582.8" y1="469.1" x2="535.9" y2="518.1" />
+                <line fill="none" stroke="#000000" stroke-width="6.55" stroke-miterlimit="10"
+                    x1="588.6" y1="518.1" x2="530.2" y2="567" />
+                <line fill="none" stroke="#000000" stroke-width="6.55" stroke-miterlimit="10"
+                    x1="594.3" y1="567" x2="524.4" y2="616" />
+                <line fill="none" stroke="#000000" stroke-width="6.55" stroke-miterlimit="10"
+                    x1="600.1" y1="616" x2="518.6" y2="664.9" />
+                <rect x="550.8" y="403.8" width="22.9" height="31.7" />
+                <rect x="537.7" y="441.9" width="49.1" height="24" />
+                <polygon points="550.8,435.4 537.7,441.9 586.8,441.9 573.7,435.4" />
+            </g>
+
+            <g id="crank">
+                <g id="link">
+                    <rect x="443.7" y="403.8" width="12" height="61.5" />
+                    <rect x="445.9" y="465.1" width="7.6" height="150" />
+                </g>
+                <g id="working-wire-wrap" clip-path="url(#clipping-path)">
+                    <g id="working-wire">
+                        <rect id="bridle" x="707.9" y="420" width="5.5" height="350" />
+                        <rect id="hang" x="702.4" y="636.7" width="16.4" height="19.1" />
+                    </g>
+                </g>
+
+                <clipPath id="clipping-path">
+                    <rect id="working-wire-clip" x="660" y="350" width="100" height="350"
+                        fill="none" stroke-width="0" />
+                </clipPath>
+
+                <g id="hammer">
+                    <rect id="walking-beam" x="412.1" y="376.5" width="260.3" height="27.3" />
+                    <path id="horsehead"
+                        d="M672.4,337.2v158.9l12,1.8c0,0,64.8-101.4,8.9-175.1L672.4,337.2z" />
+                </g>
+            </g>
+
+            <g id="tee">
+                <path
+                    d="M719.6,692.1v-17.3h-17.9v17.3c0,1.1-0.9,2-2,2h-5.4v5.3H727v-5.3h-5.4C720.5,694.1,719.6,693.2,719.6,692.1z" />
+                <rect x="705.9" y="655.9" width="9.5" height="19" />
+            </g>
+        </g>
+
+        <g id="text">
+            <g id="96">
+                <path stroke="#FFFFFF" stroke-width="8" stroke-miterlimit="10"
+                    d="M485.8,465.7c-2.3-6.9-6.5-12.9-12.6-17.8c-6-5-14.6-8.8-25.6-11.5s-25.1-4.1-42.3-4.1c-21.5,0-38,2.3-49.7,7
+			c-11.6,4.6-19.7,11.2-24.2,19.7s-6.7,18.4-6.7,29.8v26.9c0,11.1,2,20.3,5.9,27.9c3.9,7.5,10.7,13.2,20.3,16.9
+			c9.6,3.7,22.8,5.6,39.6,5.6c14.3,0,26.2-1.4,35.5-4.2v6.3c0,6.9-1.2,11.5-3.6,13.6c-2.4,2.1-7.1,3.2-14,3.2H356
+			c-6.7,0-10.1,3.4-10.1,10.1v33c0,6.7,3.4,10.1,10.1,10.1h64.4c17.8,0,31.6-2.4,41.6-7.3c9.9-4.9,17-11.6,21.1-20.2
+			c4.1-8.6,6.2-18.6,6.2-30v-91.8C489.3,480.4,488.1,472.6,485.8,465.7z M426.1,509.8c0,2.8-1.1,5.2-3.2,7.1
+			c-2.1,1.9-7.3,2.9-15.5,2.9c-8.4,0-13.8-0.9-16-2.9c-2.3-1.9-3.4-4.3-3.4-7.1v-16.5c0-3,1.2-5.4,3.4-7.4c2.3-1.9,7.6-2.9,16-2.9
+			c8.2,0,13.4,0.9,15.5,2.9c2.1,1.9,3.2,4.4,3.2,7.4V509.8z" />
+                <path stroke="#FFFFFF" stroke-width="8" stroke-miterlimit="10"
+                    d="M675.1,530.8c-4-7.5-10.7-13.1-20.2-16.8c-9.6-3.7-22.8-5.6-39.8-5.6c-14.3,0-26.1,1.4-35.4,4.1v-6.2
+			c0-6.9,1.2-11.5,3.6-13.6c2.4-2.1,7.1-3.2,14-3.2h52.4c6.7,0,10.1-3.4,10.1-10.1v-33c0-6.7-3.4-10.1-10.1-10.1h-64.4
+			c-17.5,0-31.3,2.4-41.4,7.3s-17.2,11.6-21.3,20.2c-4.1,8.6-6.2,18.6-6.2,30v91.8c0,8.5,1.2,16.3,3.5,23.2
+			c2.3,6.9,6.5,12.9,12.6,17.8c6,5,14.6,8.8,25.6,11.5c11,2.7,25.1,4.1,42.3,4.1c21.5,0,38-2.3,49.7-7c11.6-4.6,19.7-11.2,24.2-19.7
+			s6.7-18.4,6.7-29.8v-26.9C681,547.6,679,538.3,675.1,530.8z M617.7,581.2c0,3-1.1,5.5-3.4,7.4s-7.6,2.9-16,2.9
+			c-8,0-13.1-1-15.4-2.9s-3.4-4.4-3.4-7.4v-16.5c0-2.8,1.2-5.2,3.4-7.1s7.4-2.9,15.4-2.9c8.4,0,13.7,1,16,2.9s3.4,4.3,3.4,7.1V581.2
+			z" />
+            </g>
+
+            <g id="CN">
+                <path stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10"
+                    d="M485.8,399.2h-24.4c-8.4,0-14.6-1.7-18.6-5s-6-8.5-6-15.4v-31.1c0-7,2-12.2,6-15.5s10.2-5,18.6-5h24.4
+			c2.4,0,3.6,1.2,3.6,3.6v12.1c0,2.4-1.2,3.6-3.6,3.6h-20.1c-4.1,0-6.1,1.7-6.1,5v23.8c0,3.2,2,4.8,6.1,4.8h20.1
+			c2.4,0,3.6,1.2,3.6,3.6v11.9C489.4,398,488.2,399.2,485.8,399.2z" />
+                <path stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10"
+                    d="M519.2,399.2h-15c-2.4,0-3.6-1.2-3.6-3.6v-64.8c0-2.4,1.2-3.6,3.6-3.6h10.4c2.4,0,4.4,0.9,5.9,2.7l19.4,22.2
+			v-21.3c0-2.4,1.2-3.6,3.6-3.6h15c2.4,0,3.6,1.2,3.6,3.6v64.8c0,2.4-1.2,3.6-3.6,3.6h-15c-2.4,0-3.6-1.2-3.6-3.6v-12.3l-17.1-20.7
+			v33C522.8,398,521.7,399.2,519.2,399.2z" />
+            </g>
+        </g>
+
+        <circle id="outer-frame" cx="500" cy="500" r="460" fill="none"
+            stroke="#000" stroke-width="80" stroke-miterlimit="10" />
+    </g>
+
+
+</svg>
