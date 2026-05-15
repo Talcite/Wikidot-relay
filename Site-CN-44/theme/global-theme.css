@@ -1,0 +1,169 @@
+/*
+    Powered on 2024
+    [2024 Wikidot Theme]
+    [Black Highlighter theme]
+    Created by Dr Talcite for Site-CN-44
+    CC BY-SA 3.0
+*/
+
+:root:lang(cn) {
+        --header-title: "Site-CN-44";
+        --header-subtitle: "千尺深蓝";
+}
+
+:root {
+/* 版头标题和logo */
+    --header-title: "Site-CN-44";
+    --header-subtitle: "千尺深蓝";
+    --logo-image: url("https://area-cn-02.wikidot.com/local--files/component:site-cn-44/site-cn-44-bhl-white.svg");
+
+/* 自定义颜色 */
+    --ocean-bottom: 0, 6, 34;
+    --dark-sea-blue: 29, 48, 67;
+    --navy-blue: 28, 69, 135;
+    --horizon-blue: 57, 87, 128;
+    --rig-gray: 84, 104, 127;
+    --haze-blue: 120, 150, 200;
+    --wave-foam: 212, 226, 244;
+    --paper-white: 248, 248, 256;
+
+/* 基础色 */
+    --white-monochrome: var(--paper-white);
+    --pale-gray-monochrome: 240, 240, 248;
+    --light-pale-gray-monochrome: var(--wave-foam);
+    --very-light-gray-monochrome: var(--wave-foam);
+    --light-gray-monochrome: 160, 160, 160;
+    --gray-monochrome: var(--ocean-bottom);
+    --dark-gray-monochrome: var(--dark-sea-blue);
+    --black-monochrome: 12, 12, 12;
+    --pale-accent: var(--haze-blue);
+    --bright-accent: var(--navy-blue);
+    --medium-accent: var(--navy-blue);
+    --dark-accent: var(--horizon-blue);
+    --alt-accent: 221, 102, 17;
+
+/* 版头图片加载不出时的渐变样式 */
+    --gradient-header: 
+linear-gradient(to top,
+#001638 0%, 
+#3a61a3 38%,  
+#c7d2db 40%, 
+#b2c2d6 40%, 
+#3564b8 58%, 
+#11367a 100%);
+
+/* 蓝色棋盘格渐变样式 */
+    --gradient-checkerboard: 
+conic-gradient(
+transparent 0deg 90deg, 
+rgb(var(--haze-blue)) 90deg 180deg, 
+transparent 180deg 270deg, 
+rgb(var(--haze-blue)) 270deg 360deg);
+
+/* 灰色警戒线渐变样式 */
+    --gradient-cordon: 
+repeating-linear-gradient(135deg, 
+rgb(var(--rig-gray)), 
+rgb(var(--rig-gray)) 20%, 
+transparent 20%, 
+transparent 40%);
+
+}
+
+/* 版头图片 */
+div#container-wrap {
+    background-image: url(https://area-cn-02.wdfiles.com/local--files/component:site-cn-44/sky-sea.jpg);
+    background-size: auto var(--header-height-on-desktop);
+    background-repeat: repeat-x;
+}
+
+/* 顶部渐变棋盘格纹理 */
+#content-wrap {
+    background-image: linear-gradient(to bottom, rgba(var(--haze-blue), 0.5), transparent 200px);
+}
+
+/* 顶栏悬停时的底纹 */
+.top-bar > ul > li:hover, .mobile-top-bar > ul > li:hover {
+    background-image: var(--gradient-cordon);
+}
+
+/* 侧栏 */
+#side-bar {
+    background-color: transparent;
+}
+#side-bar .heading {
+    background-color: rgb(var(--haze-blue));
+}
+#side-bar .heading p {
+    margin-bottom: 4px;
+    color: rgb(var(--paper-white));
+}
+
+/* 页面标题 */
+#page-title:after, .meta-title:after {
+    background: rgb(var(--haze-blue));
+}
+
+/* 评分模块 */
+.page-rate-widget-box span.rate-points {
+    border: none;
+}
+
+
+
+/* 版头字号及位置 */
+#header h1 a {
+    margin-top: calc(var(--header-height-on-desktop) / 2 - .85em);
+    margin-left: calc(var(--header-height-on-desktop) - 0.5rem);
+    padding: 1.75rem 0 0;
+}
+#header h2 span {
+    --wght: 800;
+}
+
+/* 修复用户信息窗口溢出 */
+#odialog-container div.owindow {
+    position: relative;
+}
+
+
+/* 移动端版头渐变模式及logo位置 */
+/* 移动端版头字号及位置 */
+@media only screen and (max-width: 56.25rem) {
+    :root {
+        --gradient-header: linear-gradient(to top,
+#001638 0%, 
+#3a61a3 28%,  
+#c7d2db 31%, 
+#b2c2d6 31%, 
+#3564b8 58%, 
+#11367a 100%);
+}
+    #header {
+         background-position: calc(var(--header-height-on-mobile) - 1rem - var(--size)) calc(((var(--size)* -1) + var(--header-height-on-mobile) + 1rem) / 2);
+    }
+    #side-bar {
+        background-color: rgb(var(--paper-white));
+    }
+    #header h1 a {
+        margin-top: calc(var(--header-height-on-mobile) / 2 - 1.75rem);
+    }
+    #header h2 span {
+        margin-top: calc(var(--header-height-on-mobile) / 2 + var(--header-h1-font-size) / 2 + 0.25rem);
+    }
+    /* 修复窄屏下用户信息窗口溢出 */
+    #odialog-container div.owindow > div.modal-body > img:first-child ~ table {
+        overflow: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: rgb(var(--haze-blue)) rgb(var(--pale-gray-monochrome));
+        grid-template-columns: unset;
+        max-height: 45vh;
+        font-size: 90%;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    #odialog-container div.owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table {
+        max-width: 70vw;
+    }
+}
