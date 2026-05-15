@@ -1,0 +1,576 @@
+/* Lato Black 字体 */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+/* 思源黑体 */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@900&family=Noto+Sans+TC:wght@900&display=swap');
+
+/* Libre Barcode 39 字体 */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap');
+
+/* 全局设置 */
+:root {
+    --v-id-card-width: calc(150px + 15vw);
+
+    --v-id-card-logo: url(https://area-cn-02.wdfiles.com/local--files/component:v-id-card/scp-logo-alternate.svg);
+
+    --v-id-card-bg-color: rgb(255, 255, 255);
+    --v-id-card-text-color: rgb(0, 0, 0);
+    --v-id-card-secondary-color: rgb(175, 175, 175);
+    --v-id-card-level0-color: rgb(230, 230, 230);
+    --v-id-card-level1-color: rgb(58, 214, 55);
+    --v-id-card-level2-color: rgb(50, 148, 255);
+    --v-id-card-level3-color: rgb(255, 200, 38);
+    --v-id-card-level4-color: rgb(255, 131, 38);
+    --v-id-card-level5-color: rgb(255, 38, 0);
+
+    --v-id-card-gradient-1: linear-gradient(to bottom, rgb(50, 134, 224), 40%, rgb(255, 255, 255));
+    --v-id-card-gradient-2: radial-gradient(rgb(255, 255, 255), rgb(226, 224, 233));
+    --v-id-card-gradient-3: radial-gradient(ellipse 100% 120% at bottom, rgb(200, 200, 200), rgb(21, 21, 30));
+}
+
+@media only screen and (max-width: 167px) {
+    :root {
+        --v-id-card-width: 90vw;
+    }
+}
+
+.id-card-vertical {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    margin: var(--v-id-card-margin, 2em auto);
+    box-sizing: border-box;
+    width: var(--v-id-card-width);
+    height: var(--v-id-card-height, auto);
+    min-height: calc(var(--v-id-card-width)* 1.414);
+    padding: var(--v-id-card-padding, calc(var(--v-id-card-width) * 0.045));
+    border-radius: var(--v-id-card-radius, calc(var(--v-id-card-width) * 0.05));
+
+    box-shadow: 0 0 calc(var(--v-id-card-width) * 0.025) gray;
+    font-family: 'Lato', "Noto Sans SC", "Noto Sans TC", Tahoma, sans-serif;
+    font-size: calc(var(--v-id-card-width) * 0.06);
+    line-height: initial;
+    background-color: var(--v-id-card-bg-color);
+    color: var(--v-id-card-text-color);
+
+    display: grid;
+    grid-template-areas: "level level portrait"
+                                   "data . portrait"
+                                   "data . ."
+                                   "data info info";
+    grid-template-columns: 25% 1fr 46%;
+    grid-template-rows: 
+                                   calc(var(--v-id-card-width) * 0.4) 
+                                   calc(var(--v-id-card-width) * 0.1) 
+                                   calc(var(--v-id-card-width) * 0.1) 
+                                   1fr;
+}
+
+/* 水印 */
+
+.id-card-vertical::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: var(--v-id-card-logo-opacity, 0.08);
+    background-image: var(--v-id-card-logo);
+    background-repeat: no-repeat;
+    background-size: 75% 75%;
+    background-position: 186% 146%;
+    pointer-events: none;
+}
+
+/* ↖️左上角部分 */
+
+.id-card-vertical .level {
+    grid-area: level;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.id-card-vertical .level-bar-container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--v-id-card-width) * 0.013);
+    width: calc(var(--v-id-card-width) * 0.39);
+    margin-left: calc(var(--v-id-card-padding, calc(var(--v-id-card-width) * 0.045)) * -1);
+}
+
+.id-card-vertical .level-bar {
+    width: 100%;
+    height: calc(var(--v-id-card-width) * 0.0267);
+    background-color: var(--v-id-card-level0-color);
+}
+
+.id-card-vertical .level-1 .level-bar:nth-child(1) {
+    background-color: var(--v-id-card-level1-color);
+}
+.id-card-vertical .level-2 .level-bar:is(:nth-child(1), :nth-child(2)) {
+    background-color: var(--v-id-card-level2-color);
+}
+.id-card-vertical .level-3 .level-bar:is(:nth-child(1), :nth-child(2), :nth-child(3)) {
+    background-color: var(--v-id-card-level3-color);
+}
+.id-card-vertical .level-4 .level-bar:is(:nth-child(1), :nth-child(2), :nth-child(3), :nth-child(4)) {
+    background-color: var(--v-id-card-level4-color);
+}
+.id-card-vertical .level-5 .level-bar {
+    background-color: var(--v-id-card-level5-color);
+}
+
+.id-card-vertical .level-name {
+    font-weight: 900;
+    font-size: calc(var(--v-id-card-width) * 0.19);
+    position: absolute;
+    bottom: 0;
+}
+
+/* ↙️左下角部分 */
+
+.id-card-vertical .data {
+    grid-area: data;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: calc(var(--v-id-card-width)* 0.02);
+}
+
+.id-card-vertical .barcode-wrap {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: calc(var(--v-id-card-width)* 0.02);
+    white-space: nowrap;
+    writing-mode: vertical-lr;
+    text-align: right;
+}
+
+.id-card-vertical .barcode {
+    font-family: 'Libre Barcode 39', sans-serif;
+    font-size: calc(var(--v-id-card-width) * 0.167);
+    font-weight: normal;     /* Barcode cannot display properly on higher font weights */
+    margin-left: -0.38em;
+    transform: scaleX(1.2);
+    overflow: hidden;
+}
+
+.id-card-vertical .barcode-num {
+    font-weight: 900;
+    font-size: calc(var(--v-id-card-width) * 0.067);
+}
+
+.id-card-vertical .issue-exp {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    font-size: 0;    /* Remove <br> which takes up space */
+}
+
+.id-card-vertical span.issue-exp-title {
+    font-weight: 900;
+    font-size: calc(var(--v-id-card-width) * 0.043);
+    color: var(--v-id-card-secondary-color);
+}
+
+.id-card-vertical span.issue-exp-content {
+    font-weight: 900;
+    font-size: calc(var(--v-id-card-width) * 0.056);
+}
+
+/* ↗️右上角部分 */
+
+.id-card-vertical .portrait {
+    grid-area: portrait;
+    border: solid calc(var(--v-id-card-width) * 0.019) var(--v-id-card-secondary-color);
+    aspect-ratio: 3 / 4;
+    position: relative;
+    margin: calc(var(--v-id-card-width)* 0.01);
+}
+
+.id-card-vertical .portrait::after {
+    content: "";
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    top: calc(var(--v-id-card-width)* -0.03);
+    bottom: calc(var(--v-id-card-width)* -0.03);
+    left: calc(var(--v-id-card-width)* -0.03);
+    right: calc(var(--v-id-card-width)* -0.03);
+    border: calc(var(--v-id-card-width)* 0.005) solid var(--v-id-card-secondary-color);
+    clip-path: polygon(
+0% 0%, 
+var(--v-id-card-portrait-horizontal-corner-size, 33.3%) 0%, 
+var(--v-id-card-portrait-horizontal-corner-size, 33.3%) var(--v-id-card-portrait-vertical-corner-size, 25%), 
+calc(100% - var(--v-id-card-portrait-horizontal-corner-size, 33.3%)) var(--v-id-card-portrait-vertical-corner-size, 25%), 
+calc(100% - var(--v-id-card-portrait-horizontal-corner-size, 33.3%)) 0%, 
+100% 0%, 
+100% var(--v-id-card-portrait-vertical-corner-size, 25%), 
+calc(100% - var(--v-id-card-portrait-horizontal-corner-size, 33.3%)) var(--v-id-card-portrait-vertical-corner-size, 25%), 
+calc(100% - var(--v-id-card-portrait-horizontal-corner-size, 33.3%)) calc(100% - var(--v-id-card-portrait-vertical-corner-size, 25%)), 
+100% calc(100% - var(--v-id-card-portrait-vertical-corner-size, 25%)), 
+100% 100%, 
+calc(100% - var(--v-id-card-portrait-horizontal-corner-size, 33.3%)) 100%, 
+calc(100% - var(--v-id-card-portrait-horizontal-corner-size, 33.3%)) calc(100% - var(--v-id-card-portrait-vertical-corner-size, 25%)), 
+var(--v-id-card-portrait-horizontal-corner-size, 33.3%) calc(100% - var(--v-id-card-portrait-vertical-corner-size, 25%)), 
+var(--v-id-card-portrait-horizontal-corner-size, 33.3%) 100%, 
+0% 100%, 
+0% calc(100% - var(--v-id-card-portrait-vertical-corner-size, 25%)), 
+var(--v-id-card-portrait-horizontal-corner-size, 33.3%) calc(100% - var(--v-id-card-portrait-vertical-corner-size, 25%)), 
+var(--v-id-card-portrait-horizontal-corner-size, 33.3%) var(--v-id-card-portrait-vertical-corner-size, 25%), 
+0% var(--v-id-card-portrait-vertical-corner-size, 25%), 
+0% 0%);
+}
+
+.id-card-vertical .portrait img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ↘️右下角部分 */
+
+.id-card-vertical .info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    gap: calc(var(--v-id-card-width)* 0.01);
+    word-break: break-all;
+    max-width: calc((var(--v-id-card-width) - var(--v-id-card-padding, calc(var(--v-id-card-width) * 0.045))* 2)* 0.75) !important;
+
+}
+
+.id-card-vertical span.info-title {
+    font-weight: 900;
+    font-size: calc(var(--v-id-card-width) * 0.055);
+    color: var(--v-id-card-secondary-color);
+}
+
+.id-card-vertical span.info-content {
+    font-weight: 900;
+    font-size: calc(var(--v-id-card-width) * 0.08);
+    display: flex;
+    flex-direction: row-reverse; /* 防止文字向右溢出 */
+}
+
+/* 🌈骄傲旗渐变 */
+:root {
+    --v-id-card-gradient-pride:
+linear-gradient(to bottom,
+rgb(228, 0, 0) 16.7%,
+rgb(255, 140, 0) 16.7%,
+rgb(255, 140, 0) 33.3%,
+rgb(255, 237, 0) 33.3%,
+rgb(255, 237, 0) 50%,
+rgb(0, 128, 38) 50%,
+rgb(0, 128, 38) 66.7%,
+rgb(0, 77, 255) 66.7%,
+rgb(0, 77, 255) 83.3%,
+rgb(117, 7, 135) 83.3%);
+
+    --v-id-card-gradient-phil:
+linear-gradient(to bottom,
+rgb(0, 0, 0) 12.5%,
+rgb(121, 78, 16) 12.5%,
+rgb(121, 78, 16) 25%,
+rgb(228, 0, 0) 25%,
+rgb(228, 0, 0) 37.5%,
+rgb(255, 140, 0) 37.5%,
+rgb(255, 140, 0) 50%,
+rgb(255, 237, 0) 50%,
+rgb(255, 237, 0) 62.5%,
+rgb(0, 128, 38) 62.5%,
+rgb(0, 128, 38) 75%,
+rgb(0, 77, 255) 75%,
+rgb(0, 77, 255) 87.5%,
+rgb(117, 7, 135) 87.5%);
+
+    --v-id-card-gradient-abro:
+linear-gradient(to bottom,
+rgb(101, 194, 134) 20%,
+rgb(180, 228, 204) 20%,
+rgb(180, 228, 204) 40%,
+rgb(255, 255, 255) 40%,
+rgb(255, 255, 255) 60%,
+rgb(231, 150, 183) 60%,
+rgb(231, 150, 183) 80%,
+rgb(217, 68, 110) 80%);
+
+    --v-id-card-gradient-agender:
+linear-gradient(to bottom,
+rgb(0, 0, 0) 14.3%,
+rgb(187, 187, 187) 14.3%,
+rgb(187, 187, 187) 28.6%,
+rgb(255, 255, 255) 28.6%,
+rgb(255, 255, 255) 42.9%,
+rgb(186, 244, 132) 42.9%,
+rgb(186, 244, 132) 57.1%,
+rgb(255, 255, 255) 57.1%,
+rgb(255, 255, 255) 71.4%,
+rgb(187, 187, 187) 71.4%,
+rgb(187, 187, 187) 85.7%,
+rgb(0, 0, 0) 85.7%);
+
+    --v-id-card-gradient-aroace:
+linear-gradient(to bottom,
+rgb(226, 140, 0) 20%,
+rgb(236, 205, 0) 20%,
+rgb(236, 205, 0) 40%,
+rgb(255, 255, 255) 40%,
+rgb(255, 255, 255) 60%,
+rgb(98, 174, 220) 60%,
+rgb(98, 174, 220) 80%,
+rgb(32, 56, 86) 80%);
+
+    --v-id-card-gradient-aromantic:
+linear-gradient(to bottom,
+rgb(58, 166, 64) 20%,
+rgb(168, 212, 122) 20%,
+rgb(168, 212, 122) 40%,
+rgb(255, 255, 255) 40%,
+rgb(255, 255, 255) 60%,
+rgb(171, 171, 171) 60%,
+rgb(171, 171, 171) 80%,
+rgb(0, 0, 0) 80%);
+
+    --v-id-card-gradient-asexual:
+linear-gradient(to bottom,
+rgb(0, 0, 0) 25%,
+rgb(149, 149, 149) 25%,
+rgb(149, 149, 149) 50%,
+rgb(255, 255, 255) 50%,
+rgb(255, 255, 255) 75%,
+rgb(102, 0, 102) 75%);
+
+    --v-id-card-gradient-bi:
+linear-gradient(to bottom,
+rgb(215, 0, 113) 40%,
+rgb(156, 78, 151) 40%,
+rgb(156, 78, 151) 60%,
+rgb(0, 53, 170) 60%);
+
+    --v-id-card-gradient-bigender:
+linear-gradient(to bottom,
+rgb(104, 146, 217) 14.3%,
+rgb(145, 195, 231) 14.3%,
+rgb(145, 195, 231) 28.6%,
+rgb(255, 255, 255) 28.6%,
+rgb(255, 255, 255) 42.9%,
+rgb(197, 164, 236) 42.9%,
+rgb(197, 164, 236) 57.1%,
+rgb(255, 255, 255) 57.1%,
+rgb(255, 255, 525) 71.4%,
+rgb(248, 171, 197) 71.4%,
+rgb(248, 171, 197) 85.7%,
+rgb(237, 121, 168) 85.7%);
+
+    --v-id-card-gradient-demiboy:
+linear-gradient(to bottom,
+rgb(127, 127, 127) 14.3%,
+rgb(195, 195, 195) 14.3%,
+rgb(195, 195, 195) 28.6%,
+rgb(153, 217, 234) 28.6%,
+rgb(153, 217, 234) 42.9%,
+rgb(255, 255, 255) 42.9%,
+rgb(255, 255, 255) 57.1%,
+rgb(153, 217, 234) 57.1%,
+rgb(153, 217, 234) 71.4%,
+rgb(195, 195, 195) 71.4%,
+rgb(195, 195, 195) 85.7%,
+rgb(127, 127, 127) 85.7%);
+
+    --v-id-card-gradient-demigender:
+linear-gradient(to bottom,
+rgb(127, 127, 127) 14.3%,
+rgb(195, 195, 195) 14.3%,
+rgb(195, 195, 195) 28.6%,
+rgb(251, 255, 117) 28.6%,
+rgb(251, 255, 117) 42.9%,
+rgb(255, 255, 255) 42.9%,
+rgb(255, 255, 255) 57.1%,
+rgb(251, 255, 117) 57.1%,
+rgb(251, 255, 117) 71.4%,
+rgb(195, 195, 195) 71.4%,
+rgb(195, 195, 195) 85.7%,
+rgb(127, 127, 127) 85.7%);
+
+    --v-id-card-gradient-demigirl:
+linear-gradient(to bottom,
+rgb(127, 127, 127) 14.3%,
+rgb(195, 195, 195) 14.3%,
+rgb(195, 195, 195) 28.6%,
+rgb(255, 176, 202) 28.6%,
+rgb(255, 176, 202) 42.9%,
+rgb(255, 255, 255) 42.9%,
+rgb(255, 255, 255) 57.1%,
+rgb(255, 176, 202) 57.1%,
+rgb(255, 176, 202) 71.4%,
+rgb(195, 195, 195) 71.4%,
+rgb(195, 195, 195) 85.7%,
+rgb(127, 127, 127) 85.7%);
+
+    --v-id-card-gradient-enbian:
+linear-gradient(to bottom,
+rgb(62, 75, 198) 14.3%,
+rgb(93, 95, 247) 14.3%,
+rgb(93, 95, 247) 28.6%,
+rgb(146, 159, 247) 28.6%,
+rgb(146, 159, 247) 42.9%,
+rgb(255, 255, 255) 42.9%,
+rgb(255, 255, 255) 57.1%,
+rgb(218, 160, 241) 57.1%,
+rgb(218, 160, 241) 71.4%,
+rgb(131, 66, 186) 71.4%,
+rgb(131, 66, 186) 85.7%,
+rgb(58, 27, 144) 85.7%);
+
+    --v-id-card-gradient-gaymen:
+linear-gradient(to bottom,
+rgb(7, 142, 112) 14.3%,
+rgb(38, 206, 170) 14.3%,
+rgb(38, 206, 170) 28.6%,
+rgb(152, 232, 193) 28.6%,
+rgb(152, 232, 193) 42.9%,
+rgb(255, 255, 255) 42.9%,
+rgb(255, 255, 255) 57.1%,
+rgb(123, 173, 226) 57.1%,
+rgb(123, 173, 226) 71.4%,
+rgb(80, 73, 203) 71.4%,
+rgb(80, 73, 203) 85.7%,
+rgb(61, 26, 120) 85.7%);
+
+    --v-id-card-gradient-genderfluid:
+linear-gradient(to bottom,
+rgb(254, 117, 161) 20%,
+rgb(255, 255, 255) 20%,
+rgb(255, 255, 255) 40%,
+rgb(190, 24, 214) 40%,
+rgb(190, 24, 214) 60%,
+rgb(0, 0, 0) 60%,
+rgb(0, 0, 0) 80%,
+rgb(51, 62, 188) 80%);
+
+    --v-id-card-gradient-genderflux:
+linear-gradient(to bottom,
+rgb(244, 118, 148) 16.7%,
+rgb(242, 162, 185) 16.7%,
+rgb(242, 162, 185) 33.3%,
+rgb(206, 206, 206) 33.3%,
+rgb(206, 206, 206) 50%,
+rgb(124, 224, 247) 50%,
+rgb(124, 224, 247) 66.7%,
+rgb(62, 205, 249) 66.7%,
+rgb(62, 205, 249) 83.3%,
+rgb(255, 244, 141) 83.3%);
+
+    --v-id-card-gradient-genderqueer:
+ linear-gradient(to bottom,
+rgb(182, 151, 218) 33.3%,
+rgb(255, 255, 255) 33.3%,
+rgb(255, 255, 255) 66.7%,
+rgb(107, 142, 58) 66.7%);
+
+    --v-id-card-gradient-lesbian:
+linear-gradient(to bottom,
+rgb(215, 44, 0) 14.3%,
+rgb(239, 116, 39) 14.3%,
+rgb(239, 116, 39) 28.6%,
+rgb(255, 151, 87) 28.6%,
+rgb(255, 151, 87) 42.9%,
+rgb(255, 255, 255) 42.9%,
+rgb(255, 255, 255) 57.1%,
+rgb(209, 98, 166) 57.1%,
+rgb(209, 98, 166) 71.4%,
+rgb(183, 85, 146) 71.4%,
+rgb(183, 85, 146) 85.7%,
+rgb(165, 1, 98) 85.7%);
+
+    --v-id-card-gradient-nb:
+linear-gradient(to bottom,
+rgb(254, 244, 51) 25%,
+rgb(255, 255, 255) 25%,
+rgb(255, 255, 255) 50%,
+rgb(154, 89, 207) 50%,
+rgb(154, 89, 207) 75%,
+rgb(45, 45, 45) 75%);
+
+    --v-id-card-gradient-neutrois:
+linear-gradient(to bottom,
+rgb(255, 255, 255) 33.3%,
+rgb(43, 157, 23) 33.3%,
+rgb(43, 157, 23) 66.7%,
+rgb(0, 0, 0) 66.7%);
+
+   --v-id-card-gradient-omni:
+linear-gradient(to bottom,
+rgb(255, 156, 206) 20%,
+rgb(255, 82, 191) 20%,
+rgb(255, 82, 191) 40%,
+rgb(33, 0, 68) 40%,
+rgb(33, 0, 68) 60%,
+rgb(102, 94, 255) 60%,
+rgb(102, 94, 255) 80%,
+rgb(141, 167, 255) 80%);
+
+    --v-id-card-gradient-pan:
+linear-gradient(to bottom,
+rgb(255, 27, 141) 33.3%,
+rgb(255, 217, 0) 33.3%,
+rgb(255, 217, 0) 66.7%,
+rgb(27, 179, 255) 66.7%);
+
+    --v-id-card-gradient-pangender:
+linear-gradient(to bottom,
+rgb(255, 247, 152) 14.3%,
+rgb(254, 221, 204) 14.3%,
+rgb(254, 221, 204) 28.6%,
+rgb(255, 235, 252) 28.6%,
+rgb(255, 235, 252) 42.9%,
+rgb(255, 255, 255) 42.9%,
+rgb(255, 255, 255) 57.1%,
+rgb(255, 235, 252) 57.1%,
+rgb(255, 235, 252) 71.4%,
+rgb(254, 221, 204) 71.4%,
+rgb(254, 221, 204) 85.7%,
+rgb(255, 247, 152) 85.7%);
+
+    --v-id-card-gradient-poly:
+linear-gradient(to bottom,
+rgb(246, 28, 185) 33.3%,
+rgb(7, 213, 105) 33.3%,
+rgb(7, 213, 105) 66.7%,
+rgb(28, 146, 246) 66.7%);
+
+    --v-id-card-gradient-qpr:
+linear-gradient(to bottom,
+rgb(255, 249, 125) 20%,
+rgb(255, 174, 221) 20%,
+rgb(255, 174, 221) 40%,
+rgb(255, 255, 255) 40%,
+rgb(255, 255, 255) 60%,
+rgb(127, 127, 127) 60%,
+rgb(127, 127, 127) 80%,
+rgb(15, 15, 15) 80%);
+
+    --v-id-card-gradient-trans:
+linear-gradient(to bottom,
+rgb(91, 207, 250) 20%,
+rgb(245, 171, 185) 20%,
+rgb(245, 171, 185) 40%,
+rgb(255, 255, 255) 40%,
+rgb(255, 255, 255) 60%,
+rgb(245, 171, 185) 60%,
+rgb(245, 171, 185) 80%,
+rgb(91, 207, 250) 80%);
+}
