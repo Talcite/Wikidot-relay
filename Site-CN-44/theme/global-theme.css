@@ -15,7 +15,7 @@
 /* 版头标题和logo */
     --header-title: "Site-CN-44";
     --header-subtitle: "千尺深蓝";
-    --logo-image: url("https://area-cn-02.wikidot.com/local--files/component:site-cn-44/site-cn-44-bhl-white.svg");
+    --logo-image: url("https://cdn.jsdelivr.net/gh/Talcite/Wikidot-relay/Site-CN-44/theme/images/site-cn-44-bhl-white.svg");
 
 /* 自定义颜色 */
     --ocean-bottom: 0, 6, 34;
@@ -72,7 +72,7 @@ transparent 40%);
 
 /* 版头图片 */
 div#container-wrap {
-    background-image: url(https://area-cn-02.wdfiles.com/local--files/component:site-cn-44/sky-sea.jpg);
+    background-image: url('https://cdn.jsdelivr.net/gh/Talcite/Wikidot-relay/Site-CN-44/theme/images/sky-sea.jpg');
     background-size: auto var(--header-height-on-desktop);
     background-repeat: repeat-x;
 }
