@@ -1,0 +1,487 @@
+/* 
+====================
+Minimal Wikidot Theme
+Powered on 2020
+Original by Wikidot team (?)
+Edited for Rationality Notebook by Dr Talcite
+====================
+*/
+
+/* 
+COLLAPSIBLE BUTTON SOURCE
+Source:
+https://css.wikidot.com/cssnippet:collapsible-buttons/code_
+*/
+
+.collapsible-btn .collapsible-block-link{
+    display: inline-block;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 6px 12px;
+    color: #333;
+    background-color: #FFF;
+    border: 1px solid #CCC;
+}
+.collapsible-btn .collapsible-block-link:hover,
+.collapsible-btn .collapsible-block-link:focus{
+    text-decoration: none;
+}
+.collapsible-btn .collapsible-block-link:active{
+    box-shadow: 0 3px 5px rgba(0,0,0,.125) inset;
+    outline: 0 none;
+}
+
+.collapsible-btn.collapsible-btn-default .collapsible-block-link{
+    background-color: #F5F5F5;
+    border-color: #CCCCCC;
+    color: #333;
+}
+.collapsible-btn.collapsible-btn-default .collapsible-block-link:hover,
+.collapsible-btn.collapsible-btn-default .collapsible-block-link:focus{
+    background-color: #E6E6E6;
+    border-color: #ADADAD;
+    color: #333;
+}
+
+.collapsible-btn.collapsible-btn-primary .collapsible-block-link{
+    background-color: #428BCA;
+    border-color: #3573BD;
+    color: #FFF;
+}
+.collapsible-btn.collapsible-btn-primary .collapsible-block-link:hover,
+.collapsible-btn.collapsible-btn-primary .collapsible-block-link:focus{
+    background-color: #3071A9;
+    border-color: #285E8E;
+    color: #FFF;
+}
+
+.collapsible-btn.collapsible-btn-info .collapsible-block-link{
+    background-color: #5BC0DE;
+    border-color: #46B8DA;
+    color: #FFF;
+}
+.collapsible-btn.collapsible-btn-info .collapsible-block-link:hover,
+.collapsible-btn.collapsible-btn-info .collapsible-block-link:focus{
+    background-color: #31b0d5;
+    border-color: #269ABC;
+    color: #FF;
+}
+
+.collapsible-btn.collapsible-btn-success .collapsible-block-link{
+    background-color: #269ABC;
+    border-color: #4CAE4C;
+    color: #FFF;
+}
+.collapsible-btn.collapsible-btn-success .collapsible-block-link:hover,
+.collapsible-btn.collapsible-btn-success .collapsible-block-link:focus{
+    background-color: #449D44;
+    border-color: #398439;
+    color: #FFF;
+}
+
+.collapsible-btn.collapsible-btn-warning .collapsible-block-link{
+    background-color: #F0AD4E;
+    border-color: #EEA236;
+    color: #FFF;
+}
+.collapsible-btn.collapsible-btn-warning .collapsible-block-link:hover,
+.collapsible-btn.collapsible-btn-warning .collapsible-block-link:focus{
+    background-color: #EC971F;
+    border-color: #D58512;
+    color: #FFF;
+}
+
+.collapsible-btn.collapsible-btn-danger .collapsible-block-link{
+    background-color: #D9534F;
+    border-color: #D43F3A;
+    color: #FFF;
+}
+.collapsible-btn.collapsible-btn- .collapsible-block-link:hover,
+.collapsible-btn.collapsible-btn- .collapsible-block-link:focus{
+    background-color: #C9302C;
+    border-color: #AC2925;
+    color: #FFF;
+}
+
+
+/*==== Fonts ====*/
+@import url('https://fonts.googleapis.com/css2?family=Oxanium&display=swap');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+@import url('https://rational.wikidot.com/local--files/css:global-css/FontAwesome-6.7.2.css');
+
+/* =================
+The first FontAwesome.css is based on the 4.3.0 version, without some of the newer icons.
+The second one is complementary v6.7.2, downloaded from the official website and compressed to base64.
+The first font family is "FontAwesome"
+The complementary one is named "FontAwesome-v6"
+Attributions: https://fontawesome.com/download
+================= */
+
+* {
+    font-family: Oxanium, Verdana, sans-serif;
+}
+
+tt, .code {
+    font-family: Consolas, monospace;
+}
+
+
+
+/*==== Site Logo ====*/
+
+.container header {
+    background-image: linear-gradient(rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 100%), url(https://rational.wikidot.com/local--wp8icon/wp8icon.png?83274);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px;
+}
+
+/*==== Site Title ====*/
+
+.site-title {
+    text-align: center;
+}
+
+
+
+/*==== Navigations ====*/
+
+.navbar-nav li p {
+    margin: 15px;
+}
+
+.navbar-header a.navbar-brand {display: none;}
+
+.side-bar-header button {
+    position: absolute;
+    top: -75px;
+    font-size: large;
+    z-index: 100;
+}
+
+/*==== Rating Module ====*/
+
+.page-rate-widget-box {
+    display: inline-block;
+    background-color: #666;
+    border-radius: 4px;
+    box-shadow: 0 0 5px 0 #ccc;
+}
+
+.page-rate-widget-box span.rate-points {
+    padding: 3px 10px;
+    background-color: transparent;
+}
+
+.page-rate-widget-box .btn, 
+.page-rate-widget-box .btn-default {
+    padding: 3px 10px;
+    border: none;
+    border-radius: 0;
+    border-left: 1px solid #ccc;
+}
+
+.page-rate-widget-box .cancel {
+    background-color: #666;
+    border-radius: 0 4px 4px 0;
+}
+
+.page-rate-widget-box a, 
+.page-rate-widget-box a:hover {
+    background-color: transparent;
+    padding: 0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.page-rate-widget-box a {
+    color: #666;
+}
+
+.page-rate-widget-box a:hover {
+    color: black;
+}
+
+.page-rate-widget-box .cancel a {
+    color: white;
+}
+.page-rate-widget-box .cancel a:hover {
+    color: #ddd;
+}
+
+/*==== Collapsible ====*/
+
+.collapsible-btn .collapsible-block-link{
+    border-bottom-width: 3px;
+    padding: 3px 15px;
+}
+
+
+
+/*==== Tables ====*/
+
+table {
+    margin: 1rem auto;
+}
+th, td {
+    border: 1px solid;
+    padding: 3px;
+}
+th {
+    text-align: center;
+    background: lightgrey;
+}
+table.form th, table.form td {
+    border: none !important;
+}
+
+
+
+/*==== Titles ====*/
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: bold !important;
+}
+
+
+
+/*==== Page Title ====*/
+
+.title {
+    font-weight: bold;
+    font-size: 120%;
+}
+.page-title {
+    font-size: 200%;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+
+/*==== Pop-up Windows====*/
+
+.owindow {
+    position: relative !important;
+}
+
+
+/*==== Footnotes ====*/
+
+.footnotes-footer {
+    margin: 1.5rem auto;
+}
+
+
+
+/*==== Blockquote ====*/
+
+blockquote, .blockquote {
+    background-color: #f3f3f3;
+    border-left:  5px solid #ccc;
+    padding: 1em;
+    margin: 1.5em auto;
+}
+
+/*==== Page Source ====*/
+
+.page-source {
+    border: 1px dashed gray;
+    padding: 1.5em;
+}
+
+
+/*==== Inline Diffs ====*/
+
+ins, del {
+    text-decoration: none;
+}
+
+ins {
+    background-color: #0F03;
+}
+
+del {
+    background-color: #F003;
+}
+
+.inline-diff ins:first-of-type::before, 
+.inline-diff del:first-of-type::before, 
+.inline-diff br + ins::before, 
+.inline-diff br + del::before {
+    display: inline-block;
+    font: normal normal normal 14px / 1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: '\f111';
+    position: absolute;
+    left: 0.75em;
+}
+
+.inline-diff ins::before {
+    color: #0F03;
+}
+.inline-diff del::before {
+    color: #F003;
+}
+.inline-diff ins + del::before,
+.inline-diff del + ins::before {
+    color: transparent;
+}
+
+
+/*==== Code Block ====*/
+
+/* text_highlighter.css */
+.hl-default {
+    color: #000;
+}
+.hl-code {
+    color: #000;
+}
+.hl-brackets {
+    color: #000;
+}
+.hl-comment {
+    color: #494;
+}
+.hl-quotes {
+    color: #009;
+}
+.hl-string {
+    color: #009;
+}
+.hl-identifier {
+    color: #000;
+}
+.hl-builtin {
+    color: teal;
+}
+.hl-reserved {
+    color: #55D;
+}
+.hl-inlinedoc {
+    color: blue;
+}
+.hl-var {
+    color: #494;
+}
+.hl-url {
+    color: blue;
+}
+.hl-special {
+    color: navy;
+    font-weight: bold;
+}
+.hl-number {
+    color: maroon;
+}
+.hl-inlinetags {
+    color: #949;
+    font-weight: bold;
+}
+.hl-main {
+   /* background-color: White;*/
+}
+.hl-gutter {
+    background-color: #999999;
+    color: white;
+}
+.hl-table {
+  
+}
+
+/*==== Page Options ====*/
+
+.page-tags {
+    margin: 1em 0 2em;
+    font-size: 0.9em;
+}
+
+.page-tags a {
+    padding: 0 0.2em;
+    border-top: 1px solid lightgray;
+    padding-top: 0.5em;
+}
+
+#page-options-bottom, #page-options-bottom-2 {
+    text-align: center;
+}
+#page-info, .page-watch-options, #search-top-box {
+    text-align: right;
+}
+.page-watch-options {
+    font-size: 90%;
+}
+footer.footer-wrap {
+    margin: 1em;
+    text-align: center;
+    background-color: #eee;
+}
+#footer-bar .unit, .login-status {
+    float: left;
+}
+
+.notebook-page-link{
+    width: 100%;
+    text-align: left;
+}
+.notebook-subpages-list p{
+    margin-bottom: 4px; 
+}
+.notebook-admin-sidebar{  width: 100%; }
+.notebook-admin-sidebar.collapsible-btn .collapsible-block-link{
+    width: 100%;
+}
+#page-content strong > em,
+#page-content .highlight{
+    background: #FFFF00;
+}
+#page-content strong > em {
+    font-weight: normal;
+    font-style: normal;
+}
+.label-container{
+    width: 100%;
+    font-size: 24px;
+}
+.label-container .label{
+    width: 100%;
+    display: block;
+}
+
+/*==== Marks ====*/
+
+.mark-admin-panel .mark-defaults{  display: none; }
+.mark-admin-panel .error-block {  display: none; }
+.mark-admin-panel .error-block + .mark-defaults{  display: block; }
+
+.mark-nav-info .mark-indicators{  display: block !important; }
+.mark-nav-info .mark-show-buttons{  display: none; }
+.mark-nav-info .label{  display: none; }
+.mark-nav-info.mark-nav-info-primary .label.label-primary{  display: inline !important; }
+.mark-nav-info.mark-nav-info-info .label.label-info{  display: inline !important; }
+.mark-nav-info.mark-nav-info-success .label.label-success{  display: inline !important; }
+.mark-nav-info.mark-nav-info-warning .label.label-warning{  display: inline !important; }
+.mark-nav-info.mark-nav-info-danger .label.label-danger{  display: inline !important; }
+
+#notebook-newpage-body {
+   background-color: #fff;
+}
+.notebook-add-subpage-container iframe{
+    width: 99%;
+}
+
+/*==== Extras ====*/
+
+.panel {
+    border-radius: 1em;
+    box-shadow: 0 0 5px 0;
+    margin: 25px;
+    padding: 1em;
+}
