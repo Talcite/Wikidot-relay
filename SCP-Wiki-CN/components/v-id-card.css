@@ -234,6 +234,8 @@ var(--v-id-card-portrait-horizontal-corner-size, 33.3%) var(--v-id-card-portrait
     height: 100%;
     width: 100%;
     object-fit: cover;
+    font-size: calc(var(--v-id-card-width) * 0.03); /* 防止加载不出时的图片链接文字撑大照片框 */
+
 }
 
 /* ↘️右下角部分 */
