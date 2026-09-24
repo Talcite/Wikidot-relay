@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" id="Thaumiel-warning_logo" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+
+<style type="text/css" id="arrows-animation">
+/* <![CDATA[ */
+
+    svg#Thaumiel-warning_logo #arrow1 {
+      --rotation-angle: 0deg;
+    }
+    svg#Thaumiel-warning_logo #arrow2 {
+      --rotation-angle: 120deg;
+    }
+    svg#Thaumiel-warning_logo #arrow3 {
+      --rotation-angle: 240deg;
+    }
+
+    svg#Thaumiel-warning_logo :is(#arrow1, #arrow2, #arrow3) {
+      position: absolute;
+      transform-origin: 500px 500px;
+      animation: fly-out 3s ease-in-out infinite;
+    }
+
+    @keyframes fly-out {
+      0% {
+        transform: rotate(var(--rotation-angle)) translateY(300px);
+      }
+      50% {
+        transform: rotate(var(--rotation-angle)) translateY(0px);
+      }
+      100% {
+        transform: rotate(var(--rotation-angle)) translateY(-300px);
+      }
+    }
+
+/* ]]> */
+</style>
+
+<defs>
+  <radialGradient id="radial-gradient-purple" cx="674" cy="659" r="473" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#410054" />
+    <stop offset=".4" stop-color="#8a2e8f" />
+    <stop offset=".6" stop-color="#a03ca1" />
+    <stop offset="1" stop-color="#cd58c5" />
+  </radialGradient>
+
+  <path id="scp-logo"
+    d="M274.3,770.9
+  c61.2,51,139.9,81.7,225.7,81.7c85.9,0,164.6-30.7,225.7-81.7l64.4,23.5l54-93.6L900,604l-52.4-44c3.3-19.5,5.1-39.6,5.1-60
+  c0-63.6-16.8-123.3-46.3-174.8c-41-71.7-106.5-127.7-185.1-156.5L610,101.5H500H390.1l-11.9,67.4
+  c-78.3,28.8-143.6,84.7-184.5,156.2c-29.5,51.5-46.3,111.2-46.3,174.8c0,20.4,1.8,40.5,5.1,59.9L100,604l55.9,96.8l54,93.6
+  L274.3,770.9z"
+    />
+</defs>
+
+<use xlink:href="#scp-logo" id="outer-frame" fill="#fff" stroke="#000" stroke-miterlimit="10" stroke-width="25" />
+
+<g id="arrows" clip-path="url(#arrows-clip)">
+
+  <clipPath id="arrows-clip">
+    <use xlink:href="#scp-logo"  style="overflow:visible;"/>
+  </clipPath>
+
+  <defs>
+    <g id="arrow">
+      <line x1="500" y1="226" x2="500" y2="330" fill="none" stroke="#000" stroke-miterlimit="10"
+        stroke-width="53" />
+      <polygon points="552.3 241.7 500 151 447.65 241.7 552.3 241.7" />
+    </g>
+  </defs>
+
+  <use id="arrow1" xlink:href="#arrow" />
+  <use id="arrow2" xlink:href="#arrow" />
+  <use id="arrow3" xlink:href="#arrow" />
+</g>
+
+<circle id="circle-thaumiel" cx="500" cy="500" r="225" fill="url(#radial-gradient-purple)"
+  stroke="#000" stroke-miterlimit="10" stroke-width="35" />
+
+<g id="text-thaumiel" fill="none">
+  <g id="Th" stroke="#fff" stroke-width="40">
+    <g id="T">
+      <line x1="365.87" y1="403.4" x2="511.4" y2="403.4" />
+      <line x1="438.38" y1="403.4" x2="438.38" y2="619.15" />
+    </g>
+    <g id="h">
+      <line x1="516" y1="460.85" x2="516" y2="619.15" />
+      <polyline points="516 530.98 582.38 530.98 582.38 619.15" stroke-linejoin="round" />
+    </g>
+  </g>
+
+  <g id="theta" opacity="0.5">
+    <line x1="569.36" y1="428.43" x2="599.49" y2="428.43" stroke="#fff"
+      stroke-width="12" />
+    <path d="M610.2,428.4c0,23.9-13.5,32.6-25.8,32.6-12.3,0-25.8-8.7-25.8-32.6,0-23.9,13.5-32.6,25.8-32.6,12.3,0,25.8,8.7,25.8,32.6Zm-25.8-44.6c-11.9,0-40.9,3.2-40.9,44.6,0,41.4,29.1,44.6,40.9,44.6,11.9,0,40.9-3.2,40.9-44.6s-29.1-44.6-40.9-44.6Z" fill="#fff"/>
+  </g>
+</g>
+
+</svg>
