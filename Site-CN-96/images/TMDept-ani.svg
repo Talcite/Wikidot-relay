@@ -5,15 +5,15 @@
 
 <style type="text/css" id="tmdept-animation">
 /* <![CDATA[ */
-    svg[viewBox="0 0 1000 1000"]:hover #stripe-top {
+    svg#TMDept:hover #stripe-top {
         animation: sway-top 1.5s ease forwards;
     }
 
-    svg[viewBox="0 0 1000 1000"]:hover #stripe-middle {
+    svg#TMDept:hover #stripe-middle {
         animation: sway-middle 1.5s 0.05s ease forwards;
     }
 
-    svg[viewBox="0 0 1000 1000"]:hover #stripe-bottom {
+    svg#TMDept:hover #stripe-bottom {
         animation: sway-bottom 1.5s 0.1s ease forwards;
     }
 
@@ -50,7 +50,7 @@
         }
     }
 
-    svg[viewBox="0 0 1000 1000"]:hover #base {
+    svg#TMDept:hover #base {
         transform-origin: 729.23px 490.88px;
         animation: spin 1.45s ease forwards;
     }
@@ -66,7 +66,7 @@
         }
     }
 
-    svg[viewBox="0 0 1000 1000"]:hover #inner {
+    svg#TMDept:hover #inner {
         transform-origin: 729.23px 490.88px;
         animation: come-in 1.4s ease forwards;
     }
